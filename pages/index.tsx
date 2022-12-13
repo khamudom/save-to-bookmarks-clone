@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { FiChevronDown } from 'react-icons/fi';
 import { MdOutlineRefresh } from 'react-icons/md';
 import { BsPerson } from 'react-icons/bs';
-import { SlGrid, SlList } from 'react-icons/sl';
+import { FiGrid, FiList } from 'react-icons/fi';
+import { Navbar } from '../components/Navbar';
+import { Button } from '../components/Button';
+import { Card } from '../components/Card';
 
 export default function Home() {
   return (
@@ -14,71 +16,52 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar active={true} />
+      <header className={styles.header}>
+        <div className={styles.title}>
+          <h2 className={styles.titleText}>Dashboard</h2>
+        </div>
+      </header>
       <main className={styles.main}>
-        <header className={styles.header}>
-          <div className={styles.navContainer}>
-            <nav className={styles.nav}>
-              <div className={styles.navLeft}>
-                <img
-                  className={styles.logo}
-                  src="/savetobookmarks.png"
-                  alt="save to bookmarks logo"
-                />
-                <div className={styles.link}>
-                  <a href="#">Dashboard</a>
-                  <a href="#">Import</a>
-                </div>
-              </div>
-              <div className={styles.navRight}>
-                kam
-                <FiChevronDown />
-              </div>
-            </nav>
-            <div>Dashboard</div>
-          </div>
-        </header>
-        <section className={styles.customize}>
-          <div className={styles.bookmark}>10 bookmark(s)</div>
-          <div className={styles.btnContainer}>
+        <div className={styles.mainContent}>
+          <div className={styles.customize}>
+            <div className={styles.bookmark}>10 bookmark(s)</div>
             <div className={styles.btnFilter}>
-              <button>
-                <MdOutlineRefresh /> refresh
-              </button>
-              <button>Show Tags</button>
-              <button>
-                <BsPerson /> Author
-              </button>
-            </div>
-            <div className={styles.btnLayout}>
-              <button>
-                <SlList />
-              </button>
-              <button>
-                <SlGrid />
-              </button>
+              <Button
+                icon={<MdOutlineRefresh className={styles.icon} />}
+                title={'Refresh'}
+              />
+              <Button title={'Show Tags'} />
+              <Button
+                icon={<BsPerson className={styles.icon} />}
+                title={'Authors'}
+              />
             </div>
           </div>
-        </section>
-        <section className={styles.feed}>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-        </section>
+
+          <div className={styles.tags}></div>
+
+          <div className={styles.btnLayout}>
+            <Button width={42} icon={<FiList className={styles.icon} />} />
+            <Button
+              width={42}
+              icon={<FiGrid className={styles.icon} />}
+              active={true}
+            />
+          </div>
+
+          <div className={styles.feedList}>
+            <Card />
+          </div>
+          <div className={styles.feedGrid}>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+        </div>
       </main>
     </div>
   );

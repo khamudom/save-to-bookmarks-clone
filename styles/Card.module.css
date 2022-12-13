@@ -1,0 +1,14 @@
+.card {
+  width: 386.66px;
+  height: 180px;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: all 200ms;
+}
+
+.card:hover {
+  border-color: #38bdf8;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #38bdf8;
+}

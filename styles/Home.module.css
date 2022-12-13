@@ -1,79 +1,92 @@
 .header {
   background: #ffffff;
-  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
 }
 
-.navContainer {
-  margin: auto;
-  max-width: 1216px;
+.title {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
+.titleText {
+  color: rgb(31 41 55);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
 }
 
-.navLeft,
-.navLight {
-  display: flex;
-  align-items: center;
+.main {
+  padding: 1.25rem 0;
 }
 
-.link {
-  margin-inline-start: 2.5rem;
-}
-
-.logo {
-  height: 2.25rem;
+.mainContent {
+  max-width: 80rem;
+  padding: 0 2rem;
+  margin: 0 auto;
 }
 
 .customize {
-  max-width: 1216px;
+  max-width: 80rem;
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
 }
 
-.bookmarks {
+.bookmark {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 600;
 }
 
-.btnContainer {
+.btnFilter,
+.btnLayout {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  column-gap: 0.5rem;
+  box-sizing: border-box;
 }
 
-.btnFilter {
+.btnFilter > button {
+  padding: 0.5rem 1rem;
+}
+
+.btnLayout > button {
+  padding: 0.625rem;
+}
+
+.btnLayout > button > span {
+  margin-inline-start: unset;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.tags {
   display: flex;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .btnLayout {
-  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.feed {
+.feedList {
+  display: none;
+}
+
+.feedGrid {
   max-width: 1216px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   margin-top: 0.5rem;
-  gap: 1.55rem;
-}
-
-.card {
-  width: 386.66px;
-  height: 180px;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-  border-color: #38bdf8;
-  cursor: pointer;
+  padding: 0.25rem;
+  gap: 1.5rem;
 }
