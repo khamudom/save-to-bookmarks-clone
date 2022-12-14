@@ -7,6 +7,7 @@ import { Navbar } from '../components/Navbar';
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
 import { useState } from 'react';
+import Bookmarks from '../data.json';
 
 export enum FeedLayout {
   Grid = 'Grid',
@@ -14,13 +15,22 @@ export enum FeedLayout {
 }
 
 export default function Home() {
-  const [layout, setLayout] = useState<FeedLayout>(FeedLayout.Grid);
+  const [layoutType, setLayoutType] = useState<FeedLayout>(FeedLayout.Grid);
+  const [tag, setTag] = useState<boolean>(false);
 
   function handleFeedLayout(feed: FeedLayout) {
-    if (feed === layout) {
+    if (feed === layoutType) {
       return;
     }
-    setLayout(feed);
+    setLayoutType(feed);
+  }
+
+  function handleTag() {
+    setTag(!tag);
+  }
+
+  function reloadPage() {
+    location.reload();
   }
 
   return (
@@ -40,13 +50,16 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.mainContent}>
           <div className={styles.customize}>
-            <div className={styles.bookmark}>10 bookmark(s)</div>
+            <div className={styles.bookmark}>
+              {Bookmarks.length} bookmark(s)
+            </div>
             <div className={styles.btnFilter}>
               <Button
                 icon={<MdOutlineRefresh className={styles.icon} />}
                 title={'Refresh'}
+                onClick={() => reloadPage()}
               />
-              <Button title={'Show Tags'} />
+              <Button title={'Show Tags'} onClick={() => handleTag()} />
               <Button
                 icon={<BsPerson className={styles.icon} />}
                 title={'Authors'}
@@ -54,13 +67,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.tags}></div>
+          <div
+            className={`${styles.tagRow} ${tag ? '' : `${styles.collapsed}`}`}
+          >
+            <div className={styles.tags}>
+              <div className={styles.tag}>Add a tag</div>
+            </div>
+          </div>
 
           <div className={styles.btnLayout}>
             <Button
               width={42}
               icon={<FiList className={styles.icon} />}
-              selected={layout === FeedLayout.List}
+              selected={layoutType === FeedLayout.List}
               onClick={() => {
                 handleFeedLayout(FeedLayout.List);
               }}
@@ -68,122 +87,31 @@ export default function Home() {
             <Button
               width={42}
               icon={<FiGrid className={styles.icon} />}
-              selected={layout === FeedLayout.Grid}
+              selected={layoutType === FeedLayout.Grid}
               onClick={() => handleFeedLayout(FeedLayout.Grid)}
             />
           </div>
           <div
             className={`${styles.feed} ${
-              layout === FeedLayout.Grid
+              layoutType === FeedLayout.Grid
                 ? `${styles.layoutGrid}`
                 : `${styles.layoutList}`
             }`}
           >
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
-            <Card
-              className={`${
-                layout === FeedLayout.Grid
-                  ? `${styles.cardGrid}`
-                  : `${styles.cardList}`
-              }`}
-            />
+            {Bookmarks.map((bookmark) => {
+              return (
+                <Card
+                  key={bookmark.id}
+                  className={`${
+                    layoutType === FeedLayout.Grid
+                      ? `${styles.cardGrid}`
+                      : `${styles.cardList}`
+                  }`}
+                >
+                  {bookmark.title}
+                </Card>
+              );
+            })}
           </div>
         </div>
       </main>
