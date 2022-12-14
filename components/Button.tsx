@@ -7,21 +7,24 @@ export interface ButtonProps {
   title?: string;
   width?: number;
   height?: number;
-  active?: boolean;
+  selected?: boolean;
+  onClick?: () => void;
 }
 
 export const Button = ({
-  active,
+  selected,
   icon,
   title,
   width,
   height = 42,
+  onClick,
 }: ButtonProps) => {
   return (
     <button
       type="button"
-      className={`${styles.button} ${active ? `${styles.active}` : ''}`}
+      className={`${styles.button} ${selected ? `${styles.selected}` : ''}`}
       style={{ width: `${width}px`, height: `${height}px` }}
+      onClick={onClick}
     >
       {icon} <span className={styles.title}>{title}</span>
     </button>

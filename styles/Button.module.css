@@ -14,7 +14,7 @@
   background-color: rgb(209 213 219);
 }
 
-.button.active {
+.button.selected {
   color: rgb(255 255 255);
   background-color: rgb(55 65 81);
 }

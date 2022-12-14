@@ -6,8 +6,23 @@ import { FiGrid, FiList } from 'react-icons/fi';
 import { Navbar } from '../components/Navbar';
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
+import { useState } from 'react';
+
+export enum FeedLayout {
+  Grid = 'Grid',
+  List = 'List',
+}
 
 export default function Home() {
+  const [layout, setLayout] = useState<FeedLayout>(FeedLayout.Grid);
+
+  function handleFeedLayout(feed: FeedLayout) {
+    if (feed === layout) {
+      return;
+    }
+    setLayout(feed);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -42,24 +57,133 @@ export default function Home() {
           <div className={styles.tags}></div>
 
           <div className={styles.btnLayout}>
-            <Button width={42} icon={<FiList className={styles.icon} />} />
+            <Button
+              width={42}
+              icon={<FiList className={styles.icon} />}
+              selected={layout === FeedLayout.List}
+              onClick={() => {
+                handleFeedLayout(FeedLayout.List);
+              }}
+            />
             <Button
               width={42}
               icon={<FiGrid className={styles.icon} />}
-              active={true}
+              selected={layout === FeedLayout.Grid}
+              onClick={() => handleFeedLayout(FeedLayout.Grid)}
             />
           </div>
-
-          <div className={styles.feedList}>
-            <Card />
-          </div>
-          <div className={styles.feedGrid}>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+          <div
+            className={`${styles.feed} ${
+              layout === FeedLayout.Grid
+                ? `${styles.layoutGrid}`
+                : `${styles.layoutList}`
+            }`}
+          >
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
+            <Card
+              className={`${
+                layout === FeedLayout.Grid
+                  ? `${styles.cardGrid}`
+                  : `${styles.cardList}`
+              }`}
+            />
           </div>
         </div>
       </main>
