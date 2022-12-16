@@ -1,3 +1,77 @@
+.container {
+  position: relative;
+}
+
+.active {
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  transition: 0.3s linear;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 40;
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
+}
+
+.hidden {
+  height: 4rem;
+  width: 100%;
+  z-index: 40;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: -80px;
+  transition: 0.3s linear;
+}
+
+.floatingHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  z-index: 50;
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.floatingHeader.hideHeader {
+  transform: translateY(-120px);
+}
+
+.floatingHeader.showHeader {
+  transform: translateY(0px);
+}
+
+.floatingHeader .bookmark {
+  display: flex;
+  align-items: center;
+}
+
+.floatingHeader .logo {
+  height: 2.25rem;
+  margin-inline-end: 1rem;
+}
+
+.floatingHeader .customize {
+  margin: auto;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.floatingHeader .tagRow {
+  justify-content: center;
+}
+
+.floatingHeader .tags {
+  max-width: 80rem;
+  border-bottom: none;
+}
+
 .header {
   background: #ffffff;
 }

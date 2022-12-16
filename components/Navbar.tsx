@@ -1,9 +1,10 @@
-import React from 'react';
+import Link from 'next/link';
+import React, { useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import styles from '../styles/Navbar.module.css';
 
 export interface NavbarProps {
-  active: boolean;
+  active?: boolean;
 }
 
 export const Navbar = ({ active }: NavbarProps) => {
@@ -18,15 +19,12 @@ export const Navbar = ({ active }: NavbarProps) => {
               alt="save to bookmarks logo"
             />
             <div className={styles.links}>
-              <a
-                className={`${styles.link} ${active ? `${styles.active}` : ''}`}
-                href="#"
-              >
+              <Link id="navLink" className={styles.link} href="/">
                 Dashboard
-              </a>
-              <a className={styles.link} href="#">
+              </Link>
+              <Link id="navLink" className={styles.link} href="/import">
                 Import
-              </a>
+              </Link>
             </div>
           </div>
           <div className={styles.navRight}>

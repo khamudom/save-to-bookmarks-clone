@@ -6,7 +6,7 @@ import { FiGrid, FiList } from 'react-icons/fi';
 import { Navbar } from '../components/Navbar';
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Bookmarks from '../data.json';
 
 export enum FeedLayout {
@@ -17,6 +17,7 @@ export enum FeedLayout {
 export default function Home() {
   const [layoutType, setLayoutType] = useState<FeedLayout>(FeedLayout.Grid);
   const [tag, setTag] = useState<boolean>(false);
+  const [floatingHeader, setFloatingHeader] = useState<boolean>(false);
 
   function handleFeedLayout(feed: FeedLayout) {
     if (feed === layoutType) {
@@ -33,6 +34,24 @@ export default function Home() {
     location.reload();
   }
 
+  useEffect(() => {
+    const controlFloatingHeader = () => {
+      if (typeof window !== 'undefined') {
+        if (window.scrollY > 400) {
+          setFloatingHeader(true);
+        } else {
+          setFloatingHeader(false);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', controlFloatingHeader);
+
+    return () => {
+      window.removeEventListener('scroll', controlFloatingHeader);
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -40,6 +59,59 @@ export default function Home() {
         <meta name="description" content="A clone of save to bookmarks" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <div
+        className={`${styles.floatingHeader} ${
+          floatingHeader ? `${styles.showHeader}` : `${styles.hideHeader}`
+        }`}
+      >
+        <div className={styles.customize}>
+          <div className={styles.bookmark}>
+            <img
+              className={styles.logo}
+              src="/savetobookmarks.png"
+              alt="save to bookmarks logo"
+            />
+            {Bookmarks.length} bookmark(s)
+          </div>
+          <div className={styles.btnFilter}>
+            <Button
+              icon={<MdOutlineRefresh className={styles.icon} />}
+              title={'Refresh'}
+              onClick={() => reloadPage()}
+            />
+            <Button
+              title={`${tag ? 'All Bookmarks' : 'Show Tags'}`}
+              onClick={() => handleTag()}
+            />
+            <Button
+              icon={<BsPerson className={styles.icon} />}
+              title={'Authors'}
+            />
+            <div className={styles.btnLayout}>
+              <Button
+                width={42}
+                icon={<FiList className={styles.icon} />}
+                selected={layoutType === FeedLayout.List}
+                onClick={() => {
+                  handleFeedLayout(FeedLayout.List);
+                }}
+              />
+              <Button
+                width={42}
+                icon={<FiGrid className={styles.icon} />}
+                selected={layoutType === FeedLayout.Grid}
+                onClick={() => handleFeedLayout(FeedLayout.Grid)}
+              />
+            </div>
+          </div>
+        </div>
+        <div className={`${styles.tagRow} ${tag ? '' : `${styles.collapsed}`}`}>
+          <div className={styles.tags}>
+            <div className={styles.tag}>Add a tag</div>
+          </div>
+        </div>
+      </div>
 
       <Navbar active={true} />
       <header className={styles.header}>
@@ -59,7 +131,10 @@ export default function Home() {
                 title={'Refresh'}
                 onClick={() => reloadPage()}
               />
-              <Button title={'Show Tags'} onClick={() => handleTag()} />
+              <Button
+                title={`${tag ? 'All Bookmarks' : 'Show Tags'}`}
+                onClick={() => handleTag()}
+              />
               <Button
                 icon={<BsPerson className={styles.icon} />}
                 title={'Authors'}
