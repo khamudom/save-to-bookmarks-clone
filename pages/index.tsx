@@ -113,7 +113,6 @@ export default function Home() {
         </div>
       </div>
 
-      <Navbar active={true} />
       <header className={styles.header}>
         <div className={styles.title}>
           <h2 className={styles.titleText}>Dashboard</h2>

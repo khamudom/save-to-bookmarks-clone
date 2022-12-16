@@ -1,13 +1,33 @@
+import React from 'react';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import { NextRouter, useRouter } from 'next/router';
 import { FiChevronDown } from 'react-icons/fi';
 import styles from '../styles/Navbar.module.css';
 
-export interface NavbarProps {
-  active?: boolean;
+export interface NavigationLinkProps {
+  href: string;
+  text: string;
+  router: NextRouter;
 }
 
-export const Navbar = ({ active }: NavbarProps) => {
+function NavigationLink({ href, text, router }: NavigationLinkProps) {
+  const isActive = router.asPath === (href === '/dashboard' ? '/' : href);
+  return (
+    <Link
+      href={href === '/dashboard' ? '/' : href}
+      passHref
+      className={`${styles.link} ${isActive && `${styles.active}`}`}
+    >
+      {text}
+    </Link>
+  );
+}
+
+const navigationRoutes = ['dashboard', 'import'];
+
+export const Navbar = () => {
+  const router = useRouter();
+
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
@@ -19,12 +39,16 @@ export const Navbar = ({ active }: NavbarProps) => {
               alt="save to bookmarks logo"
             />
             <div className={styles.links}>
-              <Link id="navLink" className={styles.link} href="/">
-                Dashboard
-              </Link>
-              <Link id="navLink" className={styles.link} href="/import">
-                Import
-              </Link>
+              {navigationRoutes.map((singleRoute) => {
+                return (
+                  <NavigationLink
+                    key={singleRoute}
+                    href={`/${singleRoute}`}
+                    text={singleRoute}
+                    router={router}
+                  />
+                );
+              })}
             </div>
           </div>
           <div className={styles.navRight}>

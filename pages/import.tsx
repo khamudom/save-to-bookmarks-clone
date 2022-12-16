@@ -11,7 +11,6 @@ export default function Import() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
       <header className={styles.header}>
         <div className={styles.title}>
           <h2 className={styles.titleText}>Import Bookmarks</h2>
