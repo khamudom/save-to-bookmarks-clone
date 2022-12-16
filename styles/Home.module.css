@@ -2,6 +2,35 @@
   position: relative;
 }
 
+.header {
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.title {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.titleText {
+  color: rgb(31 41 55);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+}
+
+.main {
+  padding: 1.25rem 0;
+}
+
+.mainContent {
+  max-width: 80rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
 .active {
   height: 4rem;
   width: 100%;
@@ -70,34 +99,6 @@
 .floatingHeader .tags {
   max-width: 80rem;
   border-bottom: none;
-}
-
-.header {
-  background: #ffffff;
-}
-
-.title {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 1.5rem 2rem;
-}
-
-.titleText {
-  color: rgb(31 41 55);
-  font-size: 1.25rem;
-  line-height: 1.25;
-  font-weight: 600;
-  margin: 0;
-}
-
-.main {
-  padding: 1.25rem 0;
-}
-
-.mainContent {
-  max-width: 80rem;
-  padding: 0 2rem;
-  margin: 0 auto;
 }
 
 .customize {

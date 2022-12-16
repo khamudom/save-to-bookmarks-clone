@@ -44,7 +44,9 @@ export const Navbar = () => {
                   <NavigationLink
                     key={singleRoute}
                     href={`/${singleRoute}`}
-                    text={singleRoute}
+                    text={
+                      singleRoute.charAt(0).toUpperCase() + singleRoute.slice(1)
+                    }
                     router={router}
                   />
                 );

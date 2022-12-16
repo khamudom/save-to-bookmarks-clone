@@ -3,7 +3,6 @@ import styles from '../styles/Home.module.css';
 import { MdOutlineRefresh } from 'react-icons/md';
 import { BsPerson } from 'react-icons/bs';
 import { FiGrid, FiList } from 'react-icons/fi';
-import { Navbar } from '../components/Navbar';
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
 import { useEffect, useState } from 'react';

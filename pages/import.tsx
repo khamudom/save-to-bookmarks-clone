@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { Navbar } from '../components/Navbar';
-import styles from '../styles/Home.module.css';
+import { Button } from '../components/Button';
+import styles from '../styles/Import.module.css';
 
 export default function Import() {
   return (
@@ -16,7 +16,15 @@ export default function Import() {
           <h2 className={styles.titleText}>Import Bookmarks</h2>
         </div>
       </header>
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        <div className={styles.mainContent}>
+          In order to import your Bookmarks from Twitter please click the button
+          below. The import process usually takes few seconds.
+        </div>
+        <div className={styles.import}>
+          <Button className={styles.importBtn} title={'Import Bookmarks'} />
+        </div>
+      </main>
     </div>
   );
 }

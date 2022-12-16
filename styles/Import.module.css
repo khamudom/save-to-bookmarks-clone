@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+}
+
+.header {
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.title {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.titleText {
+  color: rgb(31 41 55);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+}
+
+.main {
+  padding: 3rem 0;
+}
+
+.mainContent {
+  max-width: 80rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+
+.import {
+  max-width: 80rem;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.importBtn {
+  color: #ffffff;
+  background-color: rgb(14 165 233);
+  font-size: 1rem;
+  line-height: 24px;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(14 165 233);
+}
+
+.importBtn span {
+  margin-inline-start: 0;
+}
