@@ -180,9 +180,14 @@ export default function Home() {
                       ? `${styles.cardGrid}`
                       : `${styles.cardList}`
                   }`}
-                >
-                  {bookmark.title}
-                </Card>
+                  avatar={bookmark.avatar}
+                  name={bookmark.name}
+                  handle={bookmark.handle}
+                  tweet={bookmark.tweet}
+                  like={bookmark.like}
+                  retweet={bookmark.retweet}
+                  timeStamp={bookmark.timeStamp}
+                ></Card>
               );
             })}
           </div>

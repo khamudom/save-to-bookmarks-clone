@@ -1,98 +1,242 @@
 [
   {
     "id": 1,
-    "title": "Bookmark 1"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "Captaintofu",
+    "handle": "@captaintofu",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 2,
-    "title": "Bookmark 2"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "ActualSawyer",
+    "handle": "@actualSawyer",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 3,
-    "title": "Bookmark 3"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "ScriptTime",
+    "handle": "@scriptTime",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 4,
-    "title": "Bookmark 4"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "ChiliClash",
+    "handle": "@chiliClash",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 5,
-    "title": "Bookmark 5"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "LogicalClone",
+    "handle": "@logicalClone",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 6,
-    "title": "Bookmark 6"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "SmokyCitrus",
+    "handle": "@smokyCitrus",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 7,
-    "title": "Bookmark 7"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "SnackVar",
+    "handle": "@snackVar",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 8,
-    "title": "Bookmark 8"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "TripleRant",
+    "handle": "@tripleRant",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 9,
-    "title": "Bookmark 9"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "AnimeLoop",
+    "handle": "@animeLoop",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 10,
-    "title": "Bookmark 10"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "CorgiRace",
+    "handle": "@corgiRace",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 11,
-    "title": "Bookmark 11"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "SmellyArcane",
+    "handle": "@smellyArcane",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 12,
-    "title": "Bookmark 12"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "AriaYouth",
+    "handle": "@ariaYouth",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 13,
-    "title": "Bookmark 13"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "SeniorPit",
+    "handle": "@seniorPit",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 14,
-    "title": "Bookmark 14"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "HuntWoody",
+    "handle": "@huntWoody",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 15,
-    "title": "Bookmark 15"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "ThirdQuality",
+    "handle": "@thirdQuality",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 16,
-    "title": "Bookmark 16"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "HealthEclipse",
+    "handle": "@healthEclipse",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 17,
-    "title": "Bookmark 17"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "TubbyLink",
+    "handle": "@tubbyLink",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 18,
-    "title": "Bookmark 18"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "RareLeather",
+    "handle": "@rareLeather",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 19,
-    "title": "Bookmark 19"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "DreamyFetus",
+    "handle": "@dreamyFetus",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 20,
-    "title": "Bookmark 20"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "TrashyPhenom",
+    "handle": "@trashyPhenom",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 21,
-    "title": "Bookmark 21"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "PaddyPuff",
+    "handle": "@paddyPuff",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 22,
-    "title": "Bookmark 22"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "ChewyBurrito",
+    "handle": "@chewyBurrito",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 23,
-    "title": "Bookmark 23"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "ReignFallout",
+    "handle": "@reignFallout",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   },
   {
     "id": 24,
-    "title": "Bookmark 24"
+    "avatar": "https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk",
+    "name": "DubiousZing",
+    "handle": "@dubiousZing",
+    "tweet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "like": "1,835",
+    "retweet": "647",
+    "timeStamp": "2022 Mar 13 15:43:29"
   }
 ]
